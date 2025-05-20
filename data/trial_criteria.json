@@ -1,0 +1,7 @@
+{
+  "trial_name": "Hypertension Drug Trial",
+  "inclusion_criteria": ["Has hypertension", "Is not a smoker"],
+  "exclusion_criteria": ["Has heart disease", "Is pregnant"]
+}
+
+

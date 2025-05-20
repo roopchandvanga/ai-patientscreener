@@ -1,0 +1,5 @@
+id,name,age,conditions,smoker,pregnant
+1,Alice,58,"hypertension, diabetes",no,no
+2,Bob,70,"hypertension",no,no
+3,Clara,45,"hypertension",yes,no
+4,Dana,50,"hypertension, heart disease",no,no
