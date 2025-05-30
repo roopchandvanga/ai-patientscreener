@@ -53,6 +53,7 @@ tools = [
             "Check if a patient is eligible for the clinical trial. "
             "Provide a patient ID as string input (e.g., '3'). "
             "Use this when the user wants to verify eligibility of an existing patient."
+            "Also, provide reason why the patient is eligible or not"
         )
     ),
     Tool(
