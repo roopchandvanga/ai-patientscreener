@@ -63,6 +63,39 @@ tools = [
     )
 ]
 
+tools = [
+    Tool(
+        name="CheckEligibility",
+        func=eligibility_tool_func,
+        description=(
+            "Check if a patient is eligible for the clinical trial. "
+            "Provide a patient ID as string input (e.g., '3'). "
+            "Use this when the user wants to verify eligibility of an existing patient."
+        )
+    ),
+    Tool(
+        name="CreateNewPatientNote",
+        func=create_note_func,
+        description=(
+            "Add a new patient record using natural language input. "
+            "Input should be a full patient note text like "
+            "'65-year-old female with hypertension. Non-smoker. No heart disease.' "
+            "Use this when the user provides medical details of a new patient, "
+            "even if they don't explicitly say 'add' or 'create'."
+        )
+    ),
+    Tool(
+        name="GetPatientNote",
+        func=get_note_func,
+        description=(
+            "Fetch and display an existing patient's note based on their ID. "
+            "Input should be a patient ID as a string (e.g., '3'). "
+            "Use this when the user wants to view the medical note for a patient."
+        )
+    )
+]
+
+
 llm = ChatOpenAI(model= "gpt-4", api_key=OPENAI_API_KEY, temperature=0)
 
 agent = initialize_agent(
