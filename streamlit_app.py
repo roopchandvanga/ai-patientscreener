@@ -12,6 +12,26 @@ st.markdown("Ask a question about a patient note or trial eligibility. You can r
 
 st.sidebar.title("📁 Patient Records")
 
+import json
+import streamlit as st
+
+# Load trial criteria from JSON
+with open("data/trial_criteria.json") as f:
+    trial_criteria = json.load(f)
+
+# Display criteria in sidebar inside an expander
+with st.sidebar.expander("📋 Trial Criteria", expanded=True):
+    st.markdown(f"### 🧪 {trial_criteria.get('trial_name', 'Clinical Trial')}")
+
+    st.markdown("**✅ Inclusion Criteria**")
+    for item in trial_criteria.get("inclusion_criteria", []):
+        st.markdown(f"- {item}")
+
+    st.markdown("**❌ Exclusion Criteria**")
+    for item in trial_criteria.get("exclusion_criteria", []):
+        st.markdown(f"- {item}")
+
+
 if st.sidebar.button("View All Notes"):
     try:
         with open("data/patients_notes.json", "r") as f:
