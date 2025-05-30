@@ -1,6 +1,6 @@
 import json
 from tools.ner import extract_conditions
-from tools.classifier import classify_smoking_status
+from tools.bert_predictor import classify_smoking_status
 
 def check_eligibility(note, criteria):
     reasons = []

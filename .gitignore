@@ -8,3 +8,7 @@ __pycache__/
 
 # Environment variable files
 .env
+
+# Ignore intermediate training output
+/tools/bert-smoking-classifier
+/tools/models/bert-smoking-classifier
