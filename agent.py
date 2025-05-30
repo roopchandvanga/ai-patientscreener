@@ -49,24 +49,6 @@ tools = [
     Tool(
         name="CheckEligibility",
         func=eligibility_tool_func,
-        description="Use this to check if a patient is eligible. Input should be just the patient ID (as a string), like '3'."
-    ),
-    Tool(
-        name="CreateNewPatientNote",
-        func=create_note_func,
-        description="Add a new patient note. Input is the note text (string)."
-    ),
-    Tool(
-        name="GetPatientNote",
-        func=get_note_func,
-        description="Retrieve and view the text of a patient note. Input should be just the patient ID (as a string), like '3'."
-    )
-]
-
-tools = [
-    Tool(
-        name="CheckEligibility",
-        func=eligibility_tool_func,
         description=(
             "Check if a patient is eligible for the clinical trial. "
             "Provide a patient ID as string input (e.g., '3'). "
