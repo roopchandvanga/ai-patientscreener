@@ -11,4 +11,5 @@ __pycache__/
 
 # Ignore intermediate training output
 /tools/bert-smoking-classifier
-/tools/models/bert-smoking-classifier
+/tools/models/bert_smoking_classifier
+/tools/models/ner_model

@@ -2,15 +2,10 @@
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
 import torch
 
-import os
 
-base_path = os.path.dirname(__file__)  # tools/
-model_path = os.path.abspath(os.path.join(base_path, "models", "bert_smoking_classifier"))
+tokenizer = DistilBertTokenizerFast.from_pretrained("roopchand/bert-smoking-classifier")
+model = DistilBertForSequenceClassification.from_pretrained("roopchand/bert-smoking-classifier")
 
-
-# Load once
-tokenizer = DistilBertTokenizerFast.from_pretrained(model_path)
-model = DistilBertForSequenceClassification.from_pretrained(model_path)
 
 
 def classify_smoking_status(text: str) -> str:
